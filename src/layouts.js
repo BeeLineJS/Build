@@ -1,10 +1,10 @@
 module.exports = {
    build: build
 }
+
 const pfs = require('fs').promises;
 const fs = require('fs');
 const path = require('path');
-
 
 async function walk(dir, fileList = []) {
    const files = await pfs.readdir(dir);

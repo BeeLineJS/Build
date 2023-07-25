@@ -1,8 +1,7 @@
 module.exports = {
   build: build
 }
-const pfs = require('fs')
-  .promises;
+const pfs = require('fs').promises;
 const fs = require('fs');
 const path = require('path');
 
@@ -69,7 +68,6 @@ module.exports = {
    get
 };
 `
-
   js = js.replace(/\uFEFF/g, '');
   fs.writeFileSync(`${dir}\\factory.js`, js, 'utf8', function(err) {});
 }

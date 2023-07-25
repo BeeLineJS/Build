@@ -4,9 +4,7 @@ module.exports = {
 const pfs = require('fs').promises;
 const fs = require('fs');
 const path = require('path');
-
-
-var sass = require('node-sass');
+const sass = require('node-sass');
 
 async function walk(dir, fileList = []) {
 
