@@ -4,7 +4,7 @@ module.exports = {
 }
 
 function create(context) {
-  const {  model, util } = context;
+  const { model, util } = context;
   const html = util.encode(model.value);
 
   return require('./paragraph.html.js')(html);

@@ -16,7 +16,7 @@ async function walk(dir, fileList = []) {
       } else {
 
          if (file.endsWith('.html')) {
-            var filePath = path.join(dir, file);
+            const filePath = path.join(dir, file);
             fileList.push(filePath);
          }
       }
@@ -26,12 +26,12 @@ async function walk(dir, fileList = []) {
 
 function build(dir) {
    walk(dir).then((files) => {
-      for (var i = 0; i < files.length; i++) {
-         var filePath = files[i];
-         var content = fs.readFileSync(filePath, 'utf8');
+      for (let i = 0; i < files.length; i++) {
+         const filePath = files[i];
+         const content = fs.readFileSync(filePath, 'utf8');
 
-         var segments = filePath.split('\\');
-         var path = segments.join('\\');
+         const segments = filePath.split('\\');
+         const path = segments.join('\\');
          createTemplate(content, path);
       }
    });

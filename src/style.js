@@ -18,7 +18,7 @@ async function walk(dir, fileList = []) {
          const parentFolder = segments[segments.length - 1];
 
          if (file === parentFolder + '.scss') {
-            var filePath = path.join(dir, file);
+            const filePath = path.join(dir, file);
             fileList.push(filePath);
          }
       }
@@ -28,7 +28,7 @@ async function walk(dir, fileList = []) {
 
 function build(dir) {
    console.log('style: dir');
-   var results = [];
+   const results = [];
    walk(dir, results)
       .then((files) => {
          createLayout(dir, files.map(file => {
@@ -46,7 +46,7 @@ ${styles.join(';\n')};`;
 
    scss = scss.replace(/\uFEFF/g, '');
 
-   await fs.writeFileSync(`${dir}\\style.scss`, scss, 'utf8', function (err) {});
+   await fs.writeFileSync(`${dir}\\style.scss`, scss, 'utf8', function (err) { });
 
    sass.render({
       file: `${dir}\\style.scss`

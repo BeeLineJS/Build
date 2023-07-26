@@ -15,7 +15,7 @@ async function walk(dir, fileList = []) {
       const segments = dir.split('\\');
       const parentFolder = segments[segments.length - 1];
       if (file === parentFolder + '.js') {
-        var filePath = path.join(dir, file);
+        const filePath = path.join(dir, file);
         fileList.push(filePath);
       }
     }
@@ -26,14 +26,14 @@ async function walk(dir, fileList = []) {
 function build(dir) {
 
   console.log(`build components:  ${dir}`);
-  var components = [];
+  const components = [];
   walk(dir)
     .then((files) => {
-      for (var i = 0; i < files.length; i++) {
-        var filePath = files[i];
-        var segments = filePath.split('\\');
-        var fileName = segments.pop();
-        var name = fileName.replace(/\.[^.$]+$/, '');
+      for (let i = 0; i < files.length; i++) {
+        const filePath = files[i];
+        const segments = filePath.split('\\');
+        const fileName = segments.pop();
+        const name = fileName.replace(/\.[^.$]+$/, '');
 
         components.push({
           name,
@@ -49,7 +49,7 @@ function generateComponents(dir, components) {
   let js = `// auto generated list of available components
 
 const components = {
-${components.map(c=>`'${c.name}': require('${c.path}')`).join(',\n')}
+${components.map(c => `'${c.name}': require('${c.path}')`).join(',\n')}
 };
 
 function get(key) {
@@ -69,5 +69,5 @@ module.exports = {
 };
 `
   js = js.replace(/\uFEFF/g, '');
-  fs.writeFileSync(`${dir}\\factory.js`, js, 'utf8', function(err) {});
+  fs.writeFileSync(`${dir}\\factory.js`, js, 'utf8', function (err) { });
 }
