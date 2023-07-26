@@ -13,7 +13,7 @@ Add the following to the package scripts:
 `node node_modules\beelinejs-build\src\build ./components ./layouts && webpack`
 
 
-`./components` and `./layouts` are the path to the components and layouts 
+`components` and `layouts` are the path to the components and layouts 
 
 # Run from file
 
@@ -21,4 +21,4 @@ Create a `build.js` file and add `require('beelinejs-build')`
 
 Add a the package scripts:
 
- `node ./build ./components ./layouts`
+ `node build components layouts`
