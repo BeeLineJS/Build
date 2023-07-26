@@ -1,0 +1,25 @@
+{
+  "name": "beelinejs-build",
+  "version": "0.1.0",
+  "description": "Build script to run build for beelinejs",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "'Yaron <'yaronshamir@hotmail.com'>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeelineJS/Build.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BeelineJS/Build/issues"
+  },
+  "homepage": "https://github.com/BeelineJS/Build#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "node-sass": "9.0.0",
+    "path": "0.12.7"
+  }
+}
