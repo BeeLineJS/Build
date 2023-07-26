@@ -6,11 +6,11 @@ Build files to create component and layout factories and build html.js tempates
 
 Add the following to the package scripts:
 
-`node node_modules\beelinejs-build\src\build ./components ./layouts`
+`node node_modules\beelinejs-build\src\build components layouts`
 
 `&&` can used to run webpack for example
 
-`node node_modules\beelinejs-build\src\build ./components ./layouts && webpack`
+`node node_modules\beelinejs-build\src\build components layouts && webpack`
 
 
 `components` and `layouts` are the path to the components and layouts 
