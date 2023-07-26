@@ -1,8 +1,8 @@
 {
   "name": "beelinejs-build",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Build script to run build for beelinejs",
-  "main": "build.js",
+  "main": "src/build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
