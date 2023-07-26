@@ -1,6 +1,6 @@
 {
   "name": "beelinejs-build",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build script to run build for beelinejs",
   "main": "src/build.js",
   "scripts": {
