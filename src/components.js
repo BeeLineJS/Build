@@ -46,7 +46,7 @@ function build(dir) {
 
 function generateComponents(dir, components) {
 
-  var js = `// auto generated list of available components
+  let js = `// auto generated list of available components
 
 const components = {
 ${components.map(c=>`'${c.name}': require('${c.path}')`).join(',\n')}

@@ -38,7 +38,8 @@ function build(dir) {
 }
 
 function createTemplate(template, path) {
-   const js = `// auto generated based on ${path}
+
+   let js = `// auto generated based on ${path}
 
 module.exports =  create;
 
