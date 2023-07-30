@@ -25,7 +25,7 @@ Add a the package scripts:
 
 # Files
 ## build.js
-Main file. runs componets, layouts and style.js
+Main file. runs componets.js, layouts.js and style.js
 
 ## components
 Create a factory.js for all the components in the components folder
