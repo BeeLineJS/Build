@@ -25,13 +25,13 @@ Add a the package scripts:
 
 # Files
 ## build.js
-Main file. runs componets.js, layouts.js and style.js
+Main file. runs `componets.js`, `layouts.js` and `style.js`
 
 ## components.js
-Create a factory.js for all the components in the components folder
+Create a `factory.js` for all the components in the components folder
 
 ## templates.js
-Create all the **xxx.html** templates into ***xxx.html.js*** templates and adds a factory.js
+Create all the `xxx.html` templates into `xxx.html.js` templates and adds a `factory.js`
 
 ## style.js
-Merge all the componets scss files into **style.scss**
+Merge all the componets `scss` files into `style.scss`
