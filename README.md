@@ -22,3 +22,16 @@ Create a `build.js` file and add `require('beelinejs-build')`
 Add a the package scripts:
 
  `node build components layouts`
+
+# Files
+## build.js
+Main file. runs componets, layouts and style.js
+
+## components
+Create a factory.js for all the components in the components folder
+
+## templates.js
+Create all the **xxx.html** templates into ***xxx.html.js*** templates and adds a factory.js
+
+## style.js
+Merge all the componets scss files into **style.scss**
