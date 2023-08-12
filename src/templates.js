@@ -1,6 +1,5 @@
-module.exports = {
-   build: build
-}
+module.exports = build;
+
 const pfs = require('fs').promises;
 const fs = require('fs');
 const path = require('path');
@@ -13,12 +12,12 @@ async function walk(dir, fileList = []) {
       const stat = await pfs.stat(path.join(dir, file));
       if (stat.isDirectory()) {
          fileList = await walk(path.join(dir, file), fileList);
-      } else {
+         continue;
+      }
 
-         if (file.endsWith('.html')) {
-            const filePath = path.join(dir, file);
-            fileList.push(filePath);
-         }
+      if (file.endsWith('.html')) {
+         const filePath = path.join(dir, file);
+         fileList.push(filePath);
       }
    }
    return fileList;

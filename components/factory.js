@@ -6,7 +6,7 @@ const components = {
 
 function get(key) {
    if (components[key] == null) {
-     console.log('Component ' +key + ' not found')
+      console.log('Component ' +key + ' not found')
       return new components['Component']()
    }
 
@@ -16,6 +16,4 @@ function get(key) {
    }
 }
 
-module.exports = {
-   get
-};
+module.exports =  get;
